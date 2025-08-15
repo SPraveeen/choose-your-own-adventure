@@ -20,3 +20,7 @@ def get_job_status(job_id: str, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Job not found")
 
     return job
+
+@router.post("/create", response_model=StoryJobResponse)
+def create_job():
+    pass
